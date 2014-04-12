@@ -1,5 +1,8 @@
-Jak aktivní jsou strany na Facebooku před volbami do Evropského parlamentu 
+Jak strany před volbami eskalují komunikaci na Facebooku
 ==========================================================================
+
+Za poslední dva roky zažilo Česko volby prezidetnské, parlamentní, Senátní(), krajské i obecní, volby do Evropského parlamentu nás čekají příští měsíc. Zároveň sosiální sítě staly jednou z hlavních zbraní předvolebních kampaní. Podívali jsme se, kterým stranám se na nich daří, a kterým méně. A baví se se svými (potenciálními) voliči i v obdobích mimo horké fáze kampaní?
+
 
 [Návod na autorizaci](http://thinktostart.wordpress.com/2013/11/19/analyzing-facebook-with-r/)
 

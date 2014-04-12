@@ -16,3 +16,5 @@ plot(my_graph, vertex.size=2,
      #vertex.label=NA, 
      vertex.label.cex=0.5,
      edge.arrow.size=0, edge.curved=TRUE,layout=layout)
+
+
