@@ -5,13 +5,19 @@ strany  <- c("snked", "narodnidemokracie", "kducsl", "StranaZdravehoRozumu", "to
 posty  <- list()
 counter <- 1
 
-for (i in strany) {
-  posty[[counter]]  <- getPage(i, token=fb_oauth, 3000)
-  print(counter)
+for (i in strany[24:31]) {
+  posty[[i]]  <- getPage(i, token=fb_oauth, 4000)
+  print(i)
   counter  <- counter + 1
 }
 
 
+save(posty, file="posty")
 
+library(jsonlite)
 
+json  <- toJSON(posty)
+
+con  <- file("posty.json", "w")
+writeLines(json, con)
 
