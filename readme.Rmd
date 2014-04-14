@@ -3,6 +3,8 @@ Jak strany před volbami eskalují komunikaci na Facebooku
 
 Za poslední dva roky zažilo Česko volby prezidetnské, parlamentní, Senátní(), krajské i obecní, volby do Evropského parlamentu nás čekají příští měsíc. Zároveň sosiální sítě staly jednou z hlavních zbraní předvolebních kampaní. Podívali jsme se, kterým stranám se na nich daří, a kterým méně. A baví se se svými (potenciálními) voliči i v obdobích mimo horké fáze kampaní?
 
+A jaké posty mají od politických stran na Fcebooku největší ohlas? Podívejte se na TOP10.
+
 
 [Návod na autorizaci](http://thinktostart.wordpress.com/2013/11/19/analyzing-facebook-with-r/)
 
