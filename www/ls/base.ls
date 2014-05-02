@@ -29,7 +29,7 @@ colors =
 
 new Tooltip!watchElements!
 volby =
-    *   time: 1350086400000, name: "Zastupitelské a senátní volby 12. &ndash; 13. 10. 2012" #"2012-10-13"
+    *   time: 1350086400000, name: "Krajské a senátní volby 12. &ndash; 13. 10. 2012" #"2012-10-13"
     *   time: 1382745600000, name: "Parlametní volby 25. &ndash; 26. 10. 2013" #"2013-10-26"
     *   time: 1357948800000, name: "Prezidentské volby 11. &ndash; 12. 1. 2013" #"2013-01-12"
 
