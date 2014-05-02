@@ -1,3 +1,5 @@
+library(data.table)
+
 kandidati  <- data.frame(kandidat=c("DanielKroupaOfficial",
                                     NA,
                                     "279044678939006",
@@ -77,13 +79,16 @@ kandidati  <- data.frame(kandidat=c("DanielKroupaOfficial",
 postyLidru  <- list()
 counter <- 1
 
-for (i in kandidati[complete.cases(kandidati),][17:36,1]) {
+for (i in kandidati[complete.cases(kandidati),][,1]) {
   postyLidru[[i]]  <- getPage(i, token=fb_oauth, 4000)
   print(i)
   counter  <- counter + 1
 }
 
-getPage("122986374399386", token=fb_oauth, 4000)
+output <- lapply(postyLidru, data.table)
 
 
-kandidati[complete.cases(kandidati),]
+kandidati[complete.cases(kandidati),][,1]
+
+postyLidru
+
