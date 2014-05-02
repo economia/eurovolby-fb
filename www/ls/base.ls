@@ -18,7 +18,7 @@ volby =
     *   time: 1357948800000, name: "Prezidentské volby 11. &ndash; 12. 1. 2013" #"2013-01-12"
 
 container = d3.select ig.containers.base
-weekWidth = 4_px
+weekWidth = 2_px
 firstTime = 1325376000000
 volby.forEach -> it.week = Math.floor (it.time - firstTime) / (7 * 86400 * 1000)
 date = new Date!
