@@ -17,8 +17,8 @@ for (i in strany[30:31]) {
 output  <- lapply(postyStrany, data.table)
 output  <- lapply(output, function(x) {x[as.Date(x$created_time) > as.Date("2012-01-01"), ]})
 
-#ulož data
-json  <- toJSON(postyStrany)
-con  <- file("postyStrany.json", "w")
+# ulož data
+json  <- toJSON(output)
+con  <- file("../data/postyStrany.json", "w")
 writeLines(json, con)
 close(con)

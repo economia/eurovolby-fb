@@ -1,9 +1,10 @@
 library(data.table)
 
+# získej data
 kandidati  <- data.frame(kandidat=c("DanielKroupaOfficial",
                                     NA,
                                     "279044678939006",
-                                    "356168857746573",
+                                    "abbartos",
                                     "svobodakdu",
                                     NA,
                                     "Niedermayer.Ludek",
@@ -85,10 +86,15 @@ for (i in kandidati[complete.cases(kandidati),][,1]) {
   counter  <- counter + 1
 }
 
+# získej data
 output <- lapply(postyLidru, data.table)
+output  <- lapply(output, function(x) {x[as.Date(x$created_time) > as.Date("2013-05-01"), ]})
+
+# ulož data
+json  <- toJSON(output)
+con  <- file("../data/postyLidri.json", "w")
+writeLines(json, con)
+close(con)
 
 
-kandidati[complete.cases(kandidati),][,1]
-
-postyLidru
-
+getPage("abbartos", token=fb_oauth, 4000)
