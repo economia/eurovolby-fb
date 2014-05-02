@@ -14,6 +14,7 @@ externalStyles =
 
 externalData =
     parties: "#__dirname/data/parties.json"
+    leaders: "#__dirname/data/leaders.json"
     style: "#__dirname/www/screen.css"
 
 preferScripts = <[ postInit.js _loadData.js ../data.js init.js _loadExternal.js]>
