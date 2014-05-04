@@ -1,5 +1,5 @@
 require! fs
-(err, data) <~ fs.readFile "#__dirname/../posty.json"
+(err, data) <~ fs.readFile "#__dirname/../data/postyStrany.json"
 data .= toString!
 data .= replace /\\x/g ""
 data = JSON.parse data
