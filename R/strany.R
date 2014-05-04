@@ -7,9 +7,9 @@ strany  <- c("snked", "narodnidemokracie", "kducsl", "StranaZdravehoRozumu", "to
 postyStrany  <- list()
 counter <- 1
 
-for (i in strany[30:31]) {
-  postyStrany[[i]]  <- getPage(i, token=fb_oauth, 4000)
+for (i in strany) {
   print(i)
+  postyStrany[[i]]  <- getPage(i, token=fb_oauth, 4000)
   counter  <- counter + 1
 }
 

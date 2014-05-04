@@ -1,20 +1,17 @@
-me  <- getUsers("me", token=fb_oauth)
-
-my_friends  <- getFriends(token=fb_oauth)
-my_friends_info <- getUsers(my_friends$id, token=fb_oauth, private_info=TRUE)
-table(my_friends_info$relationship_status)
+library(data.table)
+library(jsonlite)
 
 
-# nakresli graf mé sítě
-my_network <- getNetwork(fb_oauth, format="adj.matrix")
-singletons <- rowSums(my_network)==0 # friends who are friends with me alone
+strany  <- fromJSON("../data/postyStrany.json")
+lidri  <- fromJSON("../data/postyLidri.json")
 
-require(igraph)
-my_graph <- graph.adjacency(my_network[!singletons,!singletons])
-layout <- layout.drl(my_graph,options=list(simmer.attraction=0))
-plot(my_graph, vertex.size=2, 
-     #vertex.label=NA, 
-     vertex.label.cex=0.5,
-     edge.arrow.size=0, edge.curved=TRUE,layout=layout)
+lidri  <- lapply(lidri, function(x) {x[as.Date(x$created_time) > as.Date("2012-01-01"), ]})
 
 
+sapply(strany, function (x) {
+  return(nrow(x))
+})
+
+sum(sapply(lidri, function (x) {
+  return(nrow(x))
+}))

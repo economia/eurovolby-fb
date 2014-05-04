@@ -47,7 +47,7 @@ kandidati  <- data.frame(kandidat=c("DanielKroupaOfficial",
                                   "TOP09",
                                   "LES",
                                   "LEV 21",
-                                  "Kateřina Konečná",
+                                  "KSČM",
                                   "Evropani",
                                   "RSČMS",
                                   "HNPD",
@@ -95,6 +95,3 @@ json  <- toJSON(output)
 con  <- file("../data/postyLidri.json", "w")
 writeLines(json, con)
 close(con)
-
-
-getPage("abbartos", token=fb_oauth, 4000)
