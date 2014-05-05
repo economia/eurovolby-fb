@@ -1,7 +1,7 @@
 library(data.table)
 
 # získej data
-kandidati  <- data.frame(kandidat=c("DanielKroupaOfficial",
+kandidati.seznam  <- data.frame(kandidat=c("DanielKroupaOfficial",
                                     NA,
                                     "279044678939006",
                                     "abbartos",
